@@ -1,11 +1,13 @@
 import entities.Triangle;
+
+import javax.swing.*;
 import java.util.Locale;
 import java.util.Scanner;
 
 
+
 public class Main {
     public static void main(String[] args) {
-     double p;
      double areaX, areaY;
 
         Locale.setDefault(Locale.US);
@@ -25,13 +27,13 @@ public class Main {
         y.b = scanner.nextDouble();
         y.c = scanner.nextDouble();
 
-        p = (x.a + x.b + x.c) / 2.0;
-        areaX = Math.sqrt(p *(p-x.a) * (p-x.b) * (p-x.c));
-        p = (y.a + y.b + y.c) / 2.0;
-        areaY = Math.sqrt(p *(p-y.a) * (p-y.b) * (p-y.c));
+        //Chamando o metodo de calculo
+         areaX = x.area();
+         areaY = y.area();
 
-        System.out.println("Area do triangulo X : " + areaX);
-        System.out.println("Area do triangulo Y : " + areaY);
+
+        System.out.println("Area do triangulo X: " + areaX);
+        System.out.println("Area do triangulo Y: " + areaY);
 
         if(areaX > areaY){
             System.out.println("Largura area: X " +  areaX);
